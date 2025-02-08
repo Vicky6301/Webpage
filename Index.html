@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+</div>
+</div>
+    <div class="profile-header">
+        <div class="top-bar">
+            <i class="fa-solid fa-cog settings-icon"></i> <!-- Settings Icon -->
+        </div>
+        <div class="profile-info">
+            <img src="Images/Anime.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>Ashley Smith</h2>
+            <p>100 Followers | 330 Following</p>
+        </div>
+    </div>
+
+    <div class="menu">
+        <span>Shopping</span>
+        <div class="icon-container">
+            <span class="icon grid-view">&#9724;&#9724;&#9724;</span> <!-- Grid Icon -->
+            <span class="icon list-view">&#9776;</span> <!-- List Icon -->
+        </div>
+        
+        <span>50/100</span>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+        <img src="Images/Bag1.jpg" alt="Fashion">
+        <img src="Images/Bag2.jpg" alt="Style">
+        <img src="Images/Bag3.jpg" alt="Trendy">
+        <img src="Images/Bag1.jpg" alt="Bag">
+        <img src="Images/Bag2.jpg" alt="Jeans">
+        <img src="Images/Bag3.jpg" alt="Dior">
+        <img src="Images/Bag1.jpg" alt="Glasses">
+        <img src="Images/Bag2.jpg" alt="Shoes">
+        <img src="Images/Bag3.jpg" alt="Shop">
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <i class="fa-solid fa-house"></i> <!-- Home -->
+        <i class="fa-solid fa-magnifying-glass"></i> <!-- Search -->
+        <i class="fa-solid fa-calendar-plus active"></i> <!-- Center Icon (Highlighted) -->
+        <i class="fa-regular fa-comment"></i> <!-- Chat -->
+        <i class="fa-regular fa-user"></i> <!-- Profile -->
+    </div>
+
+    <script>
+        // Navigation Active State
+        document.querySelectorAll('.nav-icon').forEach(icon => {
+            icon.addEventListener('click', function () {
+                document.querySelectorAll('.nav-icon').forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Grid and List View Toggle
+        document.querySelector('.grid-view').addEventListener('click', function () {
+            document.querySelector('.gallery').style.gridTemplateColumns = 'repeat(3, 1fr)';
+        });
+
+        document.querySelector('.list-view').addEventListener('click', function () {
+            document.querySelector('.gallery').style.gridTemplateColumns = '1fr';
+        });
+
+        // Settings Icon Click
+        document.querySelector('.settings-icon').addEventListener('click', function () {
+            alert('Settings clicked!');
+        });
+    </script>
+
+
+</body>
+</html>
